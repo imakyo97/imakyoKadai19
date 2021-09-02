@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="InputViewController" customModule="Kadai19_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1I6-Y7-czL">
+                                <rect key="frame" x="72" y="169.5" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZiJ-Yf-Ttk">
+                                <rect key="frame" x="127" y="163" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fr6-d0-GfU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZiJ-Yf-Ttk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="UNu-Ri-zcc"/>
+                            <constraint firstItem="ZiJ-Yf-Ttk" firstAttribute="leading" secondItem="1I6-Y7-czL" secondAttribute="trailing" constant="20" id="W5W-pu-YAz"/>
+                            <constraint firstItem="ZiJ-Yf-Ttk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="20" id="XaD-7i-w1m"/>
+                            <constraint firstItem="ZiJ-Yf-Ttk" firstAttribute="centerY" secondItem="1I6-Y7-czL" secondAttribute="centerY" id="vwg-gE-d7H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z66-y4-SqM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2Jx-3s-BHZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LeA-BK-xH0"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelBarButton" destination="2Jx-3s-BHZ" id="8qD-eL-2v8"/>
+                        <outlet property="nameTextField" destination="ZiJ-Yf-Ttk" id="eqH-we-fNZ"/>
+                        <outlet property="saveBarButton" destination="LeA-BK-xH0" id="ULI-sR-2iP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
