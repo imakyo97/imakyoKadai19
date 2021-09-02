@@ -10,18 +10,13 @@ import RxCocoa
 
 protocol InputViewModelInput {
     func didTapCancelButton()
-    // didTapSaveButtonはnameTextを持つだけにする
     func didTapSaveButton(nameText: String)
     func editingName(index: Int)
 }
 
 protocol InputViewModelOutput {
     var event: Driver<InputViewModel.Event> { get }
-
-    // テキストフィールドの更新はEventではなく専用のDriverで行うようにしました。
     var name: Driver<String?> { get }
-
-    // InputViewControllerでModeで条件分岐させる
     var mode: InputViewModel.Mode { get }
 }
 
@@ -31,7 +26,6 @@ protocol InputViewModelType {
 }
 
 final class InputViewModel: InputViewModelInput, InputViewModelOutput {
-    // InputViewModeにModeを移動しました。
     enum Mode {
         case add
         case edit(Int)
@@ -46,13 +40,11 @@ final class InputViewModel: InputViewModelInput, InputViewModelOutput {
     private let disposeBag = DisposeBag()
     private var items: [Item] = []
 
-    // テキストフィールドの更新はEventではなく専用のDriverで行うようにしました。
     private let nameRelay = BehaviorRelay<String?>(value: "")
     var name: Driver<String?> {
         nameRelay.asDriver()
     }
 
-    // InputViewModelでモードを管理する
     let mode: Mode
 
     init(mode: Mode) {

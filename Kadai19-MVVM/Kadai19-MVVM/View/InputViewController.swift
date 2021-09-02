@@ -19,7 +19,6 @@ class InputViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     init?(coder: NSCoder, mode: InputViewModel.Mode) {
-        // modeをInputViewModelで管理する
         self.viewModel = InputViewModel(mode: mode)
         super.init(coder: coder)
     }
@@ -68,7 +67,6 @@ class InputViewController: UIViewController {
             })
             .disposed(by: disposeBag)
 
-        // テキストフィールドの更新はEventではなく専用のDriverで行うようにしました
         viewModel.outputs.name
             .drive(nameTextField.rx.text)
             .disposed(by: disposeBag)

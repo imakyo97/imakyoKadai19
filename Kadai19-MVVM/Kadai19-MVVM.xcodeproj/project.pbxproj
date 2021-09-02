@@ -23,6 +23,7 @@
 		4736CCCF26E1168F00F0B283 /* ModelLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCCE26E1168F00F0B283 /* ModelLocator.swift */; };
 		4736CCD126E116B300F0B283 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD026E116B300F0B283 /* ListViewModel.swift */; };
 		4736CCD326E116CF00F0B283 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD226E116CF00F0B283 /* InputViewModel.swift */; };
+		4736CCD626E118E600F0B283 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD526E118E600F0B283 /* ItemRepository.swift */; };
 		643763045BEFC8C669E622D9 /* Pods_Kadai19_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB503177A918F404F88F8857 /* Pods_Kadai19_MVVM.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		4736CCCE26E1168F00F0B283 /* ModelLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLocator.swift; sourceTree = "<group>"; };
 		4736CCD026E116B300F0B283 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		4736CCD226E116CF00F0B283 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
+		4736CCD526E118E600F0B283 /* ItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
 		5643326734B5577851B0D4D9 /* Pods-Kadai19-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVM/Pods-Kadai19-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		5DC7E634939BC11A299295F8 /* Pods-Kadai19-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVM/Pods-Kadai19-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		EB503177A918F404F88F8857 /* Pods_Kadai19_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kadai19_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 			children = (
 				4736CCD026E116B300F0B283 /* ListViewModel.swift */,
 				4736CCD226E116CF00F0B283 /* InputViewModel.swift */,
+				4736CCD426E118C000F0B283 /* DataRepository */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -142,6 +145,14 @@
 				4736CCC726E1157400F0B283 /* ItemTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4736CCD426E118C000F0B283 /* DataRepository */ = {
+			isa = PBXGroup;
+			children = (
+				4736CCD526E118E600F0B283 /* ItemRepository.swift */,
+			);
+			path = DataRepository;
 			sourceTree = "<group>";
 		};
 		62E7A867449B3ABE6DAC4165 /* Frameworks */ = {
@@ -173,6 +184,7 @@
 				4736CC9B26E1143200F0B283 /* Frameworks */,
 				4736CC9C26E1143200F0B283 /* Resources */,
 				4BEB8D774387DE702657FE34 /* [CP] Embed Pods Frameworks */,
+				4736CCD726E11DF600F0B283 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,6 +243,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4736CCD726E11DF600F0B283 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
 		4BEB8D774387DE702657FE34 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +313,7 @@
 				4736CCA426E1143200F0B283 /* SceneDelegate.swift in Sources */,
 				4736CCB926E1147A00F0B283 /* ListViewController.swift in Sources */,
 				4736CCBB26E1149200F0B283 /* InputViewController.swift in Sources */,
+				4736CCD626E118E600F0B283 /* ItemRepository.swift in Sources */,
 				4736CCCD26E1166F00F0B283 /* ItemList.swift in Sources */,
 				4736CCCB26E115F900F0B283 /* Item.swift in Sources */,
 				4736CCC826E1157400F0B283 /* ItemTableViewCell.swift in Sources */,

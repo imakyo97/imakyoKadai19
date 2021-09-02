@@ -10,6 +10,7 @@ import RxRelay
 
 protocol ItemsListModel {
     var itemsObservable: Observable<[Item]> { get }
+    func loadItems(items: [Item])
     func addItem(item: Item)
     func toggle(index: Int)
     func editName(index: Int, name: String)
@@ -17,24 +18,15 @@ protocol ItemsListModel {
 }
 
 final class ItemsList: ItemsListModel {
-    enum Fruits {
-        static let apple = "りんご"
-        static let orange = "みかん"
-        static let banana = "バナナ"
-        static let pineapple = "パイナップル"
-    }
 
-    private lazy var itemsRelay = BehaviorRelay<[Item]>(
-        value: [
-            Item(isChecked: false, name: Fruits.apple),
-            Item(isChecked: true, name: Fruits.orange),
-            Item(isChecked: false, name: Fruits.banana),
-            Item(isChecked: true, name: Fruits.pineapple)
-        ]
-    )
+    private lazy var itemsRelay = BehaviorRelay<[Item]>(value: [])
 
     var itemsObservable: Observable<[Item]> {
         itemsRelay.asObservable()
+    }
+
+    func loadItems(items: [Item]) {
+        itemsRelay.accept(items)
     }
 
     func addItem(item: Item) {

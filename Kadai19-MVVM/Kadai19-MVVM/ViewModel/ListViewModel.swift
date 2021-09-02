@@ -9,6 +9,7 @@ import RxSwift
 import RxCocoa
 
 protocol ListViewModelInput {
+    func loadItems()
     func didTapAddButton()
     func didSelectRow(index: Int)
     func didTapAccessoryButton(index: Int)
@@ -27,19 +28,42 @@ protocol ListViewModelType {
 
 final class ListViewModel: ListViewModelInput, ListViewModelOutput {
     enum Event {
-        // addでindexがある、というあり得ないパターンを除外するため、2つのcaseに置き換えました
         case presentAdd
         case presentEdit(Int)
     }
 
+    private let itemRepository = ItemRepository()
     private let model: ItemsListModel = ModelLocator.shared.model // modelを共有
-    private let eventRelay = PublishRelay<Event>()
     private let disposeBag = DisposeBag()
+    private let itemsRelay = PublishRelay<[Item]>()
+    private let eventRelay = PublishRelay<Event>()
 
-    lazy var itemsObservable: Observable<[Item]> = model.itemsObservable
+    init() {
+        setupBinding()
+    }
+
+    private func setupBinding() {
+        model.itemsObservable
+            .skip(1) // 初期値が流れるため一回スキップ
+            .subscribe(onNext: { [weak self] items in
+                guard let self = self else { return }
+                self.itemRepository.saveData(items: items) // 保存
+                self.itemsRelay.accept(items)
+            })
+            .disposed(by: disposeBag)
+    }
+
+    var itemsObservable: Observable<[Item]> {
+        itemsRelay.asObservable()
+    }
 
     var event: Driver<Event> {
         eventRelay.asDriver(onErrorDriveWith: .empty())
+    }
+
+    func loadItems() {
+        guard let items = itemRepository.loadData() else { return } // 読み込み
+        model.loadItems(items: items)
     }
 
     func didTapAddButton() {
