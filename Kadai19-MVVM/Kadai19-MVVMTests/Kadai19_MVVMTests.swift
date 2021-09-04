@@ -35,36 +35,19 @@ class Kadai19_MVVMTests: XCTestCase {
         itemTableView = nil
     }
     
-    func testAddBarButtonPressedWhenCellAdded() {
+    func testSaveBarButtonPressedWhenCellAdded() {
         let numberOfRowsBeforeAddition = itemTableView.numberOfRows(inSection: 0)
-        let addBarButtonAction =
-            listViewController.navigationItem.rightBarButtonItem?.action
-        
+
         // 画面遷移
-        let expPresentInputVC = expectation(description: "画面遷移が終わるまで待つ")
-        DispatchQueue.main.async {
-            self.listViewController.perform(addBarButtonAction)
-            expPresentInputVC.fulfill()
-        }
-        wait(for: [expPresentInputVC], timeout: 2)
+        didTapAddBarButton()
         
         let inputViewController = InputViewController.instantiate(mode: .add)
         inputViewController.loadViewIfNeeded()
-        let nameTextField =
-            inputViewController.view.subviews
-            .first(where: { $0.restorationIdentifier == "NameTextField"})
-            as! UITextField
+        let nameTextField = fetchNameTextField(from: inputViewController)
         nameTextField.text = "Test-Item-Test"
-        let saveBarButtonAction =
-            inputViewController.navigationItem.rightBarButtonItem?.action
         
         // 画面遷移
-        let expDismissInputVC = expectation(description: "画面遷移が終わるまで待つ")
-        DispatchQueue.main.async {
-            inputViewController.perform(saveBarButtonAction)
-            expDismissInputVC.fulfill()
-        }
-        wait(for: [expDismissInputVC], timeout: 2)
+        didTapSaveBarButton(from: inputViewController)
         
         let numberOfRowsAfterAddition =
             itemTableView.numberOfRows(inSection: 0)
@@ -74,5 +57,33 @@ class Kadai19_MVVMTests: XCTestCase {
             numberOfRowsBeforeAddition + 1,
             "didTapSaveBarButtonした時にcellが追加されること"
         )
+    }
+
+    private func didTapAddBarButton() {
+        let addBarButtonAction =
+            listViewController.navigationItem.rightBarButtonItem?.action
+        let expPresentInputVC = expectation(description: "画面遷移が終わるまで待つ")
+        DispatchQueue.main.async {
+            self.listViewController.perform(addBarButtonAction)
+            expPresentInputVC.fulfill()
+        }
+        wait(for: [expPresentInputVC], timeout: 2)
+    }
+
+    private func didTapSaveBarButton(from vc: InputViewController) {
+        let saveBarButtonAction =
+            vc.navigationItem.rightBarButtonItem?.action
+        let expDismissInputVC = expectation(description: "画面遷移が終わるまで待つ")
+        DispatchQueue.main.async {
+            vc.perform(saveBarButtonAction)
+            expDismissInputVC.fulfill()
+        }
+        wait(for: [expDismissInputVC], timeout: 2)
+    }
+
+    private func fetchNameTextField(from vc: InputViewController) -> UITextField {
+        vc.view.subviews
+            .first(where: { $0.restorationIdentifier == "NameTextField"})
+            as! UITextField
     }
 }
