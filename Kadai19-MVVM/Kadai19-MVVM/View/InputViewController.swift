@@ -32,6 +32,7 @@ class InputViewController: UIViewController {
         super.viewDidLoad()
         setupBinding()
         setupMode()
+        setupSaveBarButton()
     }
 
     private func setupMode() {
@@ -43,17 +44,21 @@ class InputViewController: UIViewController {
         }
     }
 
-    private func setupBinding() {
-        saveBarButton.rx.tap
-            .bind(onNext: { [weak self] in
-                guard let nameText = self?.nameTextField.text else { return }
-                guard nameText != "" else { return }
-                self?.viewModel.inputs.didTapSaveButton(
-                    nameText: nameText
-                )
-            })
-            .disposed(by: disposeBag)
+    // テストコードを書くためsaveBarButton.actionで実装
+    private func setupSaveBarButton() {
+        saveBarButton.action = #selector(didTapSaveBarButton)
+        saveBarButton.target = self
+    }
 
+    @objc private func didTapSaveBarButton() {
+        guard let nameText = nameTextField.text else { return }
+        guard nameText != "" else { return }
+        viewModel.inputs.didTapSaveButton(
+            nameText: nameText
+        )
+    }
+
+    private func setupBinding() {
         cancelBarButton.rx.tap
             .subscribe(onNext: viewModel.inputs.didTapCancelButton)
             .disposed(by: disposeBag)

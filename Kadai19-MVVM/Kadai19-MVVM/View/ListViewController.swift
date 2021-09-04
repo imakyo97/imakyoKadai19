@@ -25,13 +25,10 @@ class ListViewController: UIViewController {
         setupBinding()
         setupTableView()
         viewModel.inputs.loadItems()
+        setupAddBarButton()
     }
 
     private func setupBinding() {
-        addBarButton.rx.tap
-            .subscribe(onNext: viewModel.inputs.didTapAddButton)
-            .disposed(by: disposeBag)
-
         viewModel.outputs.itemsObservable
             .bind(to: itemTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
@@ -45,6 +42,16 @@ class ListViewController: UIViewController {
                 self?.present(navigationController, animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
+    }
+
+    // テストコードを書くためにaddBarButton.actionで実装
+    private func setupAddBarButton() {
+        addBarButton.action = #selector(didTapAddBarButton)
+        addBarButton.target = self
+    }
+
+    @objc private func didTapAddBarButton() {
+        viewModel.inputs.didTapAddButton()
     }
 
     private func setupTableView() {

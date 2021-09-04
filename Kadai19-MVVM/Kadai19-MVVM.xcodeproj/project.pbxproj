@@ -24,8 +24,19 @@
 		4736CCD126E116B300F0B283 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD026E116B300F0B283 /* ListViewModel.swift */; };
 		4736CCD326E116CF00F0B283 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD226E116CF00F0B283 /* InputViewModel.swift */; };
 		4736CCD626E118E600F0B283 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD526E118E600F0B283 /* ItemRepository.swift */; };
+		4736CCDF26E2159800F0B283 /* Kadai19_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCDE26E2159800F0B283 /* Kadai19_MVVMTests.swift */; };
 		643763045BEFC8C669E622D9 /* Pods_Kadai19_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB503177A918F404F88F8857 /* Pods_Kadai19_MVVM.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4736CCE126E2159800F0B283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4736CC9626E1143200F0B283 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4736CC9D26E1143200F0B283;
+			remoteInfo = "Kadai19-MVVM";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4736CC9E26E1143200F0B283 /* Kadai19-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadai19-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +58,9 @@
 		4736CCD026E116B300F0B283 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		4736CCD226E116CF00F0B283 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 		4736CCD526E118E600F0B283 /* ItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
+		4736CCDC26E2159800F0B283 /* Kadai19-MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kadai19-MVVMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4736CCDE26E2159800F0B283 /* Kadai19_MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kadai19_MVVMTests.swift; sourceTree = "<group>"; };
+		4736CCE026E2159800F0B283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5643326734B5577851B0D4D9 /* Pods-Kadai19-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVM/Pods-Kadai19-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		5DC7E634939BC11A299295F8 /* Pods-Kadai19-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVM/Pods-Kadai19-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		EB503177A918F404F88F8857 /* Pods_Kadai19_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kadai19_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4736CCD926E2159800F0B283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				4736CCA026E1143200F0B283 /* Kadai19-MVVM */,
+				4736CCDD26E2159800F0B283 /* Kadai19-MVVMTests */,
 				4736CC9F26E1143200F0B283 /* Products */,
 				E099636643A84B5FD7668374 /* Pods */,
 				62E7A867449B3ABE6DAC4165 /* Frameworks */,
@@ -78,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4736CC9E26E1143200F0B283 /* Kadai19-MVVM.app */,
+				4736CCDC26E2159800F0B283 /* Kadai19-MVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +178,15 @@
 			path = DataRepository;
 			sourceTree = "<group>";
 		};
+		4736CCDD26E2159800F0B283 /* Kadai19-MVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				4736CCDE26E2159800F0B283 /* Kadai19_MVVMTests.swift */,
+				4736CCE026E2159800F0B283 /* Info.plist */,
+			);
+			path = "Kadai19-MVVMTests";
+			sourceTree = "<group>";
+		};
 		62E7A867449B3ABE6DAC4165 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +227,24 @@
 			productReference = 4736CC9E26E1143200F0B283 /* Kadai19-MVVM.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4736CCDB26E2159800F0B283 /* Kadai19-MVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4736CCE526E2159800F0B283 /* Build configuration list for PBXNativeTarget "Kadai19-MVVMTests" */;
+			buildPhases = (
+				4736CCD826E2159800F0B283 /* Sources */,
+				4736CCD926E2159800F0B283 /* Frameworks */,
+				4736CCDA26E2159800F0B283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4736CCE226E2159800F0B283 /* PBXTargetDependency */,
+			);
+			name = "Kadai19-MVVMTests";
+			productName = "Kadai19-MVVMTests";
+			productReference = 4736CCDC26E2159800F0B283 /* Kadai19-MVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +256,10 @@
 				TargetAttributes = {
 					4736CC9D26E1143200F0B283 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					4736CCDB26E2159800F0B283 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4736CC9D26E1143200F0B283;
 					};
 				};
 			};
@@ -223,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				4736CC9D26E1143200F0B283 /* Kadai19-MVVM */,
+				4736CCDB26E2159800F0B283 /* Kadai19-MVVMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +292,13 @@
 				4736CCA926E1143200F0B283 /* Main.storyboard in Resources */,
 				4736CCC926E1157400F0B283 /* ItemTableViewCell.xib in Resources */,
 				4736CCBD26E1149F00F0B283 /* Input.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4736CCDA26E2159800F0B283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +384,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4736CCD826E2159800F0B283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4736CCDF26E2159800F0B283 /* Kadai19_MVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4736CCE226E2159800F0B283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4736CC9D26E1143200F0B283 /* Kadai19-MVVM */;
+			targetProxy = 4736CCE126E2159800F0B283 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4736CCA726E1143200F0B283 /* Main.storyboard */ = {
@@ -500,6 +578,46 @@
 			};
 			name = Release;
 		};
+		4736CCE326E2159800F0B283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HAMLUR4PQA;
+				INFOPLIST_FILE = "Kadai19-MVVMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyohei.Kadai19-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kadai19-MVVM.app/Kadai19-MVVM";
+			};
+			name = Debug;
+		};
+		4736CCE426E2159800F0B283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HAMLUR4PQA;
+				INFOPLIST_FILE = "Kadai19-MVVMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyohei.Kadai19-MVVMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kadai19-MVVM.app/Kadai19-MVVM";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -517,6 +635,15 @@
 			buildConfigurations = (
 				4736CCB326E1143300F0B283 /* Debug */,
 				4736CCB426E1143300F0B283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4736CCE526E2159800F0B283 /* Build configuration list for PBXNativeTarget "Kadai19-MVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4736CCE326E2159800F0B283 /* Debug */,
+				4736CCE426E2159800F0B283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
