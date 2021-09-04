@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct ItemRepository {
+protocol ItemRepositoryProtocol {
+    func loadData() -> [Item]?
+    func saveData(items: [Item])
+}
+
+final class ItemRepository: ItemRepositoryProtocol {
 
     private let itemsKey = "itemsKey"
     private let userDefaults = UserDefaults.standard

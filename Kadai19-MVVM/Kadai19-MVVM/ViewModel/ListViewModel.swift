@@ -32,13 +32,14 @@ final class ListViewModel: ListViewModelInput, ListViewModelOutput {
         case presentEdit(Int)
     }
 
-    private let itemRepository = ItemRepository()
+    private let itemRepository: ItemRepositoryProtocol
     private let model: ItemsListModel = ModelLocator.shared.model // modelを共有
     private let disposeBag = DisposeBag()
     private let itemsRelay = PublishRelay<[Item]>()
     private let eventRelay = PublishRelay<Event>()
 
-    init() {
+    init(itemRepository: ItemRepositoryProtocol = ItemRepository()) {
+        self.itemRepository = itemRepository
         setupBinding()
     }
 
