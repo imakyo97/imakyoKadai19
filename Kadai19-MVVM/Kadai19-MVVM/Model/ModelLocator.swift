@@ -10,6 +10,6 @@ import Foundation
 // modelを共有するための構造体
 struct ModelLocator {
     static let shared = ModelLocator()
-    let model = ItemsList()
+    let model = ItemsList(repository: ItemRepository())
     private init() {}
 }
