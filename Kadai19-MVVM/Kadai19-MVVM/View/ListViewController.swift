@@ -17,14 +17,13 @@ class ListViewController: UIViewController {
     private let viewModel: ListViewModelType = ListViewModel()
     private let disposeBag = DisposeBag()
     private let dataSource = ItemDataSource()
-    
+
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource.delegate = self
         setupBinding()
         setupTableView()
-        viewModel.inputs.loadItems()
         setupAddBarButton()
     }
 
