@@ -24,7 +24,6 @@ class ListViewController: UIViewController {
         dataSource.delegate = self
         setupBinding()
         setupTableView()
-        viewModel.inputs.loadItems()
         setupAddBarButton()
     }
 
