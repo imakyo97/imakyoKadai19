@@ -7,7 +7,14 @@ target 'Kadai19-MVVM' do
 
   # Pods for Kadai19-MVVM
 
-pod'SwiftLint'
-pod'RxSwift'
-pod'RxCocoa'
+  pod'SwiftLint'
+  pod'RxSwift'
+  pod'RxCocoa'
+
+  target 'Kadai19-MVVMTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod'RxSwift'
+    pod'RxTest'
+  end
 end
