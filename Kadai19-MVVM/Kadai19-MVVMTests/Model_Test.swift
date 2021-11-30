@@ -21,7 +21,7 @@ class Model_Test: XCTestCase {
                 addItem = items.last
             })
             .disposed(by: DisposeBag())
-        XCTAssertTrue(addItem == addItem)
+        XCTAssertTrue(addItem == item)
     }
 }
 
