@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Item: Codable {
+struct Item: Codable, Equatable {
     var isChecked: Bool
     var name: String
 }

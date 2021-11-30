@@ -25,7 +25,9 @@
 		4736CCD326E116CF00F0B283 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD226E116CF00F0B283 /* InputViewModel.swift */; };
 		4736CCD626E118E600F0B283 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCD526E118E600F0B283 /* ItemRepository.swift */; };
 		4736CCDF26E2159800F0B283 /* Kadai19_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736CCDE26E2159800F0B283 /* Kadai19_MVVMTests.swift */; };
+		478B8DE327565E6C002762D8 /* Model_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478B8DE227565E6C002762D8 /* Model_Test.swift */; };
 		643763045BEFC8C669E622D9 /* Pods_Kadai19_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB503177A918F404F88F8857 /* Pods_Kadai19_MVVM.framework */; };
+		A4B7399F618DF5B774AC5C20 /* Pods_Kadai19_MVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749F97C8E3645A142959C83 /* Pods_Kadai19_MVVMTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3749F97C8E3645A142959C83 /* Pods_Kadai19_MVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kadai19_MVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4736CC9E26E1143200F0B283 /* Kadai19-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadai19-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4736CCA126E1143200F0B283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4736CCA326E1143200F0B283 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +64,11 @@
 		4736CCDC26E2159800F0B283 /* Kadai19-MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kadai19-MVVMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4736CCDE26E2159800F0B283 /* Kadai19_MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kadai19_MVVMTests.swift; sourceTree = "<group>"; };
 		4736CCE026E2159800F0B283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		478B8DE227565E6C002762D8 /* Model_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model_Test.swift; sourceTree = "<group>"; };
 		5643326734B5577851B0D4D9 /* Pods-Kadai19-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVM/Pods-Kadai19-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		5DC7E634939BC11A299295F8 /* Pods-Kadai19-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVM/Pods-Kadai19-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		9F34B57C7D9B0B29C3DCE440 /* Pods-Kadai19-MVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVMTests.release.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVMTests/Pods-Kadai19-MVVMTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB1928462F220E3359F750F3 /* Pods-Kadai19-MVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai19-MVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-Kadai19-MVVMTests/Pods-Kadai19-MVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB503177A918F404F88F8857 /* Pods_Kadai19_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kadai19_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B7399F618DF5B774AC5C20 /* Pods_Kadai19_MVVMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +133,7 @@
 				4736CCCA26E115F900F0B283 /* Item.swift */,
 				4736CCCC26E1166F00F0B283 /* ItemList.swift */,
 				4736CCCE26E1168F00F0B283 /* ModelLocator.swift */,
+				4736CCD426E118C000F0B283 /* DataRepository */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,7 +156,6 @@
 			children = (
 				4736CCD026E116B300F0B283 /* ListViewModel.swift */,
 				4736CCD226E116CF00F0B283 /* InputViewModel.swift */,
-				4736CCD426E118C000F0B283 /* DataRepository */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				4736CCDE26E2159800F0B283 /* Kadai19_MVVMTests.swift */,
+				478B8DE227565E6C002762D8 /* Model_Test.swift */,
 				4736CCE026E2159800F0B283 /* Info.plist */,
 			);
 			path = "Kadai19-MVVMTests";
@@ -191,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				EB503177A918F404F88F8857 /* Pods_Kadai19_MVVM.framework */,
+				3749F97C8E3645A142959C83 /* Pods_Kadai19_MVVMTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,6 +209,8 @@
 			children = (
 				5DC7E634939BC11A299295F8 /* Pods-Kadai19-MVVM.debug.xcconfig */,
 				5643326734B5577851B0D4D9 /* Pods-Kadai19-MVVM.release.xcconfig */,
+				EB1928462F220E3359F750F3 /* Pods-Kadai19-MVVMTests.debug.xcconfig */,
+				9F34B57C7D9B0B29C3DCE440 /* Pods-Kadai19-MVVMTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -231,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4736CCE526E2159800F0B283 /* Build configuration list for PBXNativeTarget "Kadai19-MVVMTests" */;
 			buildPhases = (
+				675077AAF52DBB8ED9F9DCD0 /* [CP] Check Pods Manifest.lock */,
 				4736CCD826E2159800F0B283 /* Sources */,
 				4736CCD926E2159800F0B283 /* Frameworks */,
 				4736CCDA26E2159800F0B283 /* Resources */,
+				630D98BADCC3340F399301C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,8 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		4BEB8D774387DE702657FE34 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -338,6 +350,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kadai19-MVVM/Pods-Kadai19-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		630D98BADCC3340F399301C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kadai19-MVVMTests/Pods-Kadai19-MVVMTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kadai19-MVVMTests/Pods-Kadai19-MVVMTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kadai19-MVVMTests/Pods-Kadai19-MVVMTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		675077AAF52DBB8ED9F9DCD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kadai19-MVVMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B76AB3D7DAE61C3556267B16 /* [CP] Check Pods Manifest.lock */ = {
@@ -389,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4736CCDF26E2159800F0B283 /* Kadai19_MVVMTests.swift in Sources */,
+				478B8DE327565E6C002762D8 /* Model_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +632,7 @@
 		};
 		4736CCE326E2159800F0B283 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB1928462F220E3359F750F3 /* Pods-Kadai19-MVVMTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -600,6 +653,7 @@
 		};
 		4736CCE426E2159800F0B283 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F34B57C7D9B0B29C3DCE440 /* Pods-Kadai19-MVVMTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

@@ -25,6 +25,7 @@ class ListViewController: UIViewController {
         setupBinding()
         setupTableView()
         setupAddBarButton()
+        print("\(#function): viewDidLoad----------")
     }
 
     private func setupBinding() {
