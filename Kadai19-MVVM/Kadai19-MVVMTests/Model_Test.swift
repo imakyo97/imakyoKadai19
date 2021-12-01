@@ -2,7 +2,7 @@
 //  Model_Test.swift
 //  Kadai19-MVVMTests
 //
-//  Created by 今村京平 on 2021/11/30.
+//  Created by kyoheiimamura on 2021/11/30.
 //
 
 import XCTest
